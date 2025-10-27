@@ -163,3 +163,27 @@
     margin: 8px 0;
   }
 }
+
+/* 🧠 Corrige límite de ancho */
+.navbar,
+.menu {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 📱 Mejor soporte responsive */
+@media (max-width: 600px) {
+  .navbar__actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .navbar__search input {
+    font-size: 0.9rem;
+  }
+}
