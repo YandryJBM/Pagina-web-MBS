@@ -1,19 +1,32 @@
 <div class="inicio">
 
-  <!-- 🏍️ Carrusel de promociones -->
   <section class="hero">
-    <div class="carousel">
-      <div class="slide active">
-        <img src="assets/img/banner1.jpg" alt="Promoción 1">
+    <div class="carousel" 
+        (mouseenter)="onMouseEnter()" 
+        (mouseleave)="onMouseLeave()">
+
+      <div class="slides">
+        <div
+          class="slide"
+          *ngFor="let slide of slides; let i = index"
+          [class.active]="i === activeIndex"
+        >
+          <img [src]="slide.src" [alt]="slide.alt" />
+        </div>
       </div>
-      <div class="slide">
-        <img src="assets/img/banner2.png" alt="Producto nuevo">
-      </div>
-      <div class="slide">
-        <img src="assets/img/banner3.jpg" alt="Accesorios destacados">
+      <!-- indicadores -->
+      <div class="indicators">
+        <button
+          *ngFor="let _ of slides; let i = index"
+          class="indicator"
+          [class.active]="i === activeIndex"
+          (click)="goTo(i)"
+          [attr.aria-label]="'Ir a slide ' + (i+1)"
+        ></button>
       </div>
     </div>
   </section>
+
 
   <!-- 🏍️ Motos -->
   <section class="category motos">
