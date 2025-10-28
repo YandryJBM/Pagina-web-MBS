@@ -89,7 +89,6 @@
   font-size: 0.85rem;
 }
 
-/* 📱 RESPONSIVE DESIGN */
 @media (max-width: 900px) {
   .footer__content {
     flex-direction: column;

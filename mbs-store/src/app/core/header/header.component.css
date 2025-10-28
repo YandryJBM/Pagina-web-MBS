@@ -1,4 +1,3 @@
-/* 🎯 ESTILO GENERAL */
 :host {
   display: block;
   font-family: "Poppins", sans-serif;
@@ -6,7 +5,6 @@
   color: #fff;
 }
 
-/* 🌐 NAVBAR SUPERIOR */
 .navbar {
   display: flex;
   align-items: center;
@@ -18,7 +16,7 @@
 }
 
 .navbar__logo img {
-  height: 50px;           /* tamaño ideal del logo */
+  height: 50px;
   width: auto;
   object-fit: contain;
   cursor: pointer;
@@ -29,7 +27,6 @@
   transform: scale(1.05);
 }
 
-/* 🔍 BARRA DE BÚSQUEDA */
 .navbar__search {
   display: flex;
   align-items: center;
@@ -62,7 +59,6 @@
   background-color: #e50000;
 }
 
-/* ⚙️ ACCIONES */
 .navbar__actions {
   display: flex;
   align-items: center;
@@ -105,7 +101,6 @@
   background-color: #e50000;
 }
 
-/* 📋 MENÚ PRINCIPAL */
 .menu {
   background-color: #1a1a1a;
   padding: 10px 0;
@@ -137,7 +132,6 @@
   border-bottom: 2px solid #c00000;
 }
 
-/* 📱 RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -164,7 +158,6 @@
   }
 }
 
-/* 🧠 Corrige límite de ancho */
 .navbar,
 .menu {
   width: 100%;
@@ -172,7 +165,6 @@
   margin: 0 auto;
 }
 
-/* 📱 Mejor soporte responsive */
 @media (max-width: 600px) {
   .navbar__actions {
     flex-direction: column;
