@@ -8,16 +8,6 @@
           <img [src]="slide.src" [alt]="slide.alt" />
         </div>
       </div>
-
-      <div class="indicators">
-        <button
-          *ngFor="let _ of slides; let i = index"
-          class="indicator"
-          [class.active]="i === activeIndex"
-          (click)="goTo(i)"
-          [attr.aria-label]="'Ir a slide ' + (i + 1)">
-        </button>
-      </div>
     </div>
   </section>
 

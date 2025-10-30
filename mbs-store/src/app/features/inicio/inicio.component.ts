@@ -14,7 +14,7 @@ export class InicioComponent implements OnInit, OnDestroy {
     { src: 'assets/img/banner2.png', alt: 'Producto nuevo' },
     { src: 'assets/img/banner3.jpg', alt: 'Accesorios destacados' }
   ];
-
+  
   activeIndex = 0;
   intervalMs = 5000;
   private timerId: any = null;
@@ -56,10 +56,10 @@ export class InicioComponent implements OnInit, OnDestroy {
   scrollLeft(refName: string) {
   const el = (this as any)[refName]?.nativeElement || document.querySelector(`#${refName}`);
   el?.scrollBy({ left: -300, behavior: 'smooth' });
-}
+  }
 
-scrollRight(refName: string) {
-  const el = (this as any)[refName]?.nativeElement || document.querySelector(`#${refName}`);
-  el?.scrollBy({ left: 300, behavior: 'smooth' });
-}
+  scrollRight(refName: string) {
+    const el = (this as any)[refName]?.nativeElement || document.querySelector(`#${refName}`);
+    el?.scrollBy({ left: 300, behavior: 'smooth' });
+  }
 }
