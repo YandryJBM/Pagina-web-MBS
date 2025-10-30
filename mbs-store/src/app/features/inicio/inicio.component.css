@@ -5,84 +5,38 @@
     color: #000;
 }
 
-/* 🏍️ Carrusel principal (banners) */
+/* El carrusel sin separación del header */
 .hero {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;        /* ✅ elimina cualquier espacio arriba o abajo */
+  padding: 0;
 }
 
+/* Slides del carrusel */
 .slides {
-    display: flex;
-    width: 100%;
-    transition: transform 0.8s ease-in-out;
+  display: flex;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
 }
 
 .slide {
-    flex: 0 0 100%;
-    position: relative;
+  flex: 0 0 100%;
+  position: relative;
 }
 
 .slide img {
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
 }
-
-/* 🔘 Indicadores del carrusel */
-.indicators {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.indicator.active {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* ❌ Botones laterales del carrusel principal (no usados) */
-.carousel-controls {
-    display: none;
-}
-
-/* 🧱 Reset general */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 /* 📱 Banner responsive */
 @media (max-width: 768px) {
     .slide img {
         height: 220px;
     }
-}
-
-/* 📦 Categorías */
-.category {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.category h2 {
-    color: #c00000;
-    margin-bottom: 20px;
 }
 
 /* 💬 Testimonios */
@@ -130,100 +84,6 @@ details {
 summary {
     font-weight: bold;
     color: #c00000;
-}
-
-/* 🎡 Estilo general para todos los carruseles (CORREGIDO) */
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    /* ❌ Se eliminó overflow: hidden; */
-    padding: 20px 0;
-}
-
-.carousel {
-    display: flex;
-    gap: 20px;
-    
-    /* ✅ Asegura que el contenedor abarque todo el ancho y permite el desplazamiento */
-    width: 100%; 
-    flex-wrap: nowrap; /* Impide que las tarjetas se salten de línea */
-    
-    overflow-x: auto; /* Permite el desplazamiento con scrollbar o botones */
-    scroll-snap-type: x mandatory;
-    padding: 20px;
-    scroll-behavior: smooth;
-}
-
-/* 🎨 Scrollbar personalizada */
-.carousel::-webkit-scrollbar {
-    height: 8px;
-}
-.carousel::-webkit-scrollbar-thumb {
-    background: #c00000;
-    border-radius: 4px;
-}
-.carousel::-webkit-scrollbar-track {
-    background: #eee;
-}
-
-/* 🧩 Tarjetas del carrusel */
-.carousel .card {
-    flex: 0 0 auto;
-    width: 250px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-color: #fff;
-    overflow: hidden;
-    scroll-snap-align: start;
-    transition: transform 0.3s ease;
-}
-
-.carousel .card:hover {
-    transform: scale(1.05);
-}
-
-/* 🖼️ Imágenes dentro de las tarjetas */
-.carousel .card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-}
-
-.carousel .card h3 {
-    text-align: center;
-    padding: 10px 0;
-    color: #c00000;
-}
-
-/* ⬅️➡️ Botones de navegación */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    z-index: 2;
-    transition: background-color 0.3s;
-}
-
-.scroll-btn:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.scroll-btn.left {
-    left: 10px;
-}
-
-.scroll-btn.right {
-    right: 10px;
 }
 
 /* 📱 Responsive */

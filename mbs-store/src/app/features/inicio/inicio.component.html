@@ -20,69 +20,6 @@
       </div>
     </div>
   </section>
-  <section class="category accesorios">
-    <h2>Accesorios</h2>
-    <div class="carousel-container">
-      <button class="scroll-btn left" (click)="scrollLeft('accesoriosCarousel')">&#10094;</button>
-
-      <div class="carousel" #accesoriosCarousel>
-        <div class="card" *ngFor="let a of accesorios">
-          <img [src]="a.src" [alt]="a.nombre">
-          <h3>{{ a.nombre }}</h3>
-        </div>
-      </div>
-
-      <button class="scroll-btn right" (click)="scrollRight('accesoriosCarousel')">&#10095;</button>
-    </div>
-  </section>
-
-  <section class="category repuestos">
-    <h2>Repuestos</h2>
-    <div class="carousel-container">
-      <button class="scroll-btn left" (click)="scrollLeft('repuestosCarousel')">&#10094;</button>
-
-      <div class="carousel" #repuestosCarousel>
-        <div class="card" *ngFor="let r of repuestos">
-          <img [src]="r.src" [alt]="r.nombre">
-          <h3>{{ r.nombre }}</h3>
-        </div>
-      </div>
-
-      <button class="scroll-btn right" (click)="scrollRight('repuestosCarousel')">&#10095;</button>
-    </div>
-  </section>
-
-  <section class="category motos">
-    <h2>Motos</h2>
-    <div class="carousel-container">
-      <button class="scroll-btn left" (click)="scrollLeft('motosCarousel')">&#10094;</button>
-
-      <div class="carousel" #motosCarousel>
-        <div class="card" *ngFor="let moto of motos">
-          <img [src]="moto.src" [alt]="moto.nombre">
-          <h3>{{ moto.nombre }}</h3>
-        </div>
-      </div>
-
-      <button class="scroll-btn right" (click)="scrollRight('motosCarousel')">&#10095;</button>
-    </div>
-  </section>
-
-  <section class="category bicicletas">
-    <h2>Bicicletas</h2>
-    <div class="carousel-container">
-      <button class="scroll-btn left" (click)="scrollLeft('bicisCarousel')">&#10094;</button>
-
-      <div class="carousel" #bicisCarousel>
-        <div class="card" *ngFor="let bici of bicicletas">
-          <img [src]="bici.src" [alt]="bici.nombre">
-          <h3>{{ bici.nombre }}</h3>
-        </div>
-      </div>
-
-      <button class="scroll-btn right" (click)="scrollRight('bicisCarousel')">&#10095;</button>
-    </div>
-  </section>
 
   <section class="testimonios">
     <h2>Testimonios</h2>
